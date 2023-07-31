@@ -22,7 +22,7 @@ export const UserViews = () => {
             <Route path="/posts/UserPosts/UserEditPost/:postId" element={<EditUserPost />} />
             <Route path="/Profile/:userId" element={<Profile />} />
     </Routes>
-  );
+);
 };
 
 /*

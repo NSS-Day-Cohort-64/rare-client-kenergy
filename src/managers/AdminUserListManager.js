@@ -27,6 +27,8 @@ export const UserListManager = () => {
         fetchData();
     }, []);
 
+    const sortedUsers = users.sort((a, b) => a.username.localeCompare(b.username));
+
     const handleToggleActive = async (id, active, first_name, last_name, email, bio, username, password, profile_image_url, created_on, is_admin) => {
         try {
             const response = await fetch(`http://localhost:8088/users/${id}`, {
