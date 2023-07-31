@@ -15,7 +15,6 @@ export const UserPostsList = () => {
             .then((response) => response.json())
             .then((postArray) => {
                 postArray.sort((a, b) => new Date(b.publication_date) - new Date(a.publication_date));
-    
                 setPosts(postArray);
                 setFilteredPosts(postArray);
             });
